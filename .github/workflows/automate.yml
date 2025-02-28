@@ -18,13 +18,14 @@ jobs:
           cat Dockerfile
           cat requirements.txt
 
-      - name: Log in to Docker Hub
-        uses: docker/login-action@v1
-        with:
-          username: elixir384
-          password: ${{ secrets.DOCKERTOKEN }}
-
-      - name: Build and push Docker image
+      - name: Build & Push Image
         run: |
+          echo ${{ secrets.DOCKERTOKEN }} | docker login -u "elixir384" --password-stdin
           docker build -t elixir384/devops_lab_500109921:v1.0.1 .
           docker push elixir384/devops_lab_500109921:v1.0.1
+
+                
+
+
+
+
