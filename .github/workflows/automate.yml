@@ -16,8 +16,8 @@ jobs:
         cat main.py
         cat Dockerfile
         cat requirements.txt
-        # - name: Build & Push Image
-            #   run: |
-            #     echo ${{ secrets.DOCKERTOKEN }} | docker login -u "prateekrajgautam" --password-stdin
-            #     docker build -t prateekrajgautam/upesmajorproject:v0.1 .
-            #     docker push prateekrajgautam/upesmajorproject:v0.1
+        - name: Build & Push Image
+              run: |
+                echo ${{ secrets.DOCKERTOKEN }} | docker login -u "elixir384" --password-stdin
+                docker build -t elixir384/devops_lab_500109921:v1.0.1.1
+                docker push elixir384/devops_lab_500109921:v1.0.1.1
