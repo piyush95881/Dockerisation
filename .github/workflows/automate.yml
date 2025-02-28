@@ -14,8 +14,8 @@ jobs:
             - name: Build & Push Image
               run: |
                 echo ${{ secrets.DOCKERTOKEN }} | docker login -u "elixir384" --password-stdin
-                docker build -t elixir384/devops_lab_500109921:v1.0.1.1
-                docker push elixir384/devops_lab_500109921:v1.0.1.1
+                docker build -t elixir384/devops_lab_500109921:v1.0
+                docker push elixir384/devops_lab_500109921:v1.0
 
                 
 
